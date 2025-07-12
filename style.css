@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: gainsboro;
 }
 
 .info {
@@ -12,4 +13,35 @@
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
     grid-gap: 20px;
+    padding-bottom: 5rem;
+}
+
+.show {
+    /*position: fixed;*/
+    /*bottom: 3rem;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+    /*display: block;*/
+    /*text-align: center;*/
+    /*margin: 0;*/
+    /*z-index: 2;*/
+
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    text-align: center;
+    z-index: 2;
+}
+
+#showItem {
+    width: 200px;
+    height: 2rem;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    background: khaki;
 }

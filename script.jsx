@@ -1,12 +1,3 @@
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-const cars = [
-    {serialNumber: "12345", model: "Civic", manufacturer: "Honda", yearManuf: 2019},
-    {serialNumber: "23456", model: "Accord", manufacturer: "Honda", yearManuf: 2019},
-    {serialNumber: "34567", model: "Corolla", manufacturer: "Toyota", yearManuf: 2020},
-    {serialNumber: "45678", model: "Camry", manufacturer: "Toyota", yearManuf: 2019},
-    {serialNumber: "56789", model: "370z", manufacturer: "Nissan", yearManuf: 2017},
-];
 
 class Car extends React.Component {
     render() {
@@ -34,13 +25,16 @@ function Car({serialNumber, model, manufacturer, yearManuf}) {
 }
 */
 
-function Appl() {
+function App() {
     return (
-        <div className="info">
-            {cars.map((car, i) => <Car index={i} {...car} />)}
+        <div>
+            <div className="info">
+                {cars.slice(0, visibleCount).map((car, i) => (
+                    <Car key={i} {...car} />
+                ))}
+            </div>
         </div>
     );
 }
 
-root.render(<Appl/>);
-
+root.render(<App/>);
